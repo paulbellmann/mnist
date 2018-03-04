@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 import numpy as np
 import pickle
 
-filename = 'finalized_model.sav'
-clf = pickle.load(open(filename, 'rb'))
+# filename = 'finalized_model.sav'
+# clf = pickle.load(open(filename, 'rb'))
 
 # Create your views here.
 def index(request):
