@@ -5,3 +5,4 @@ __pycache__
 local_settings.py
 .DS_Store
 train.csv
+train_and_save2.py
