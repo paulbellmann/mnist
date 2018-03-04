@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MNIST</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+    {% load static %}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'sketch.js' %}"></script>
+    <style>
+        section {
+            padding-top: 2em;
+        }
+        .test {
+            /*max-width: 20em;*/
+        }
+        .box-shadow {
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+        }
+        .lol {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="first">
+        <div class="container">
+            <div class="jumbotron">
+              <h1 class="display-4">MNIST</h1>
+              <p class="lead">This is a simple page, to test my MNIST machine learning model.</p>
+              <hr class="my-4">
+              <p>Just draw a <strong>number</strong> on the canvas and let the machine predict. Hit <strong>space</strong> to redraw.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="second">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <div class="card test mb-lg-0 mb-5 box-shadow text-center">
+                        <div class="card-header">
+                            <h4 class="my-0">Draw here!</h4>
+                        </div>
+                        <div class="card-body" id="drawing">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card test mb-lg-0 mb-5 box-shadow text-center">
+                        <div class="card-header">
+                            <h4 class="my-0">Predictions</h4>
+                        </div>
+                        <div class="card-body" style="min-height: 246px;">
+                            <div class="lol">
+                                <p>It is probably a...</p>
+                                <h1 class="card-title" id="prediction">0</h1>
+                                <p>but it could also be something different</p>
+                            </div>
+                            <!-- <button type="button" class="btn btn-lg btn-block btn-outline-primary">Haha</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
