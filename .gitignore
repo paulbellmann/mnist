@@ -6,4 +6,4 @@ local_settings.py
 .DS_Store
 train.csv
 train_and_save2.py
-# finalized_model.sav
+finalized_model.sav
