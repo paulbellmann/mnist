@@ -1,1 +1,1 @@
-web: gunicorn mnist.wsgi --log-file -
+web: gunicorn mnist.wsgi
