@@ -117,17 +117,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# static root for
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-    
+
+# overide database settings
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-# try:
-#     from local_settings import *
-# except ImportError:
-#     pass
+# so that we can still use sqlite locally
+try:
+    from local_settings import *
+except ImportError:
+    pass
