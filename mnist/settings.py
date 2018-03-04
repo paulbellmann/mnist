@@ -27,7 +27,7 @@ SECRET_KEY = 'vl2u!w_i1_=7-u)o^lj%*qwevdg4h=8ip9p7*c2qgu3%xke=%!'
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
 
 # Application definition
 
@@ -130,3 +130,8 @@ STATICFILES_DIRS = [
     
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
