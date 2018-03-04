@@ -34,7 +34,7 @@ function mouseReleased() {
 
   $.ajax({
     type: "POST",
-    url: "http://localhost:8000/predict/",
+    url: "https://mnistonline.herokuapp.com/predict/",
     data: {
       'arr': JSON.stringify(data)
     },
